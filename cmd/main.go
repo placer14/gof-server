@@ -14,7 +14,7 @@ import (
 
 func main() {
 	db := database.GetDB()
-	http.HandleFunc("/ping", handlePing)
+	http.HandleFunc("/ping", service.pingHandler)
 	http.HandleFunc("/get_string_value", getStringValue(db))
 	http.HandleFunc("/set_flag_value", setFlagValue(db))
 
